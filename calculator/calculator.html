@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <script type="text/javascript">
+        function myclick(a){
+            myform.display.value+=a;
+        }
+        function equalto(){
+            myform.display.value=eval(myform.display.value);
+        }
+        function ac(){
+            myform.display.value=""
+        }
+        function backspace(){
+            var prevalue=myform.display.value
+            myform.display.value=prevalue.substr(0,prevalue.length-1);
+        }
+        function fnsin(){
+            myform.display.value=Math.sin(myform.display.value);
+        }
+        function fncos(){
+            myform.display.value=Math.cos(myform.display.value);
+        }
+        function fntan(){
+            myform.display.value=Math.tan(myform.display.value);
+        }
+        function fnsquare(){
+            myform.display.value=Math.pow(myform.display.value,2);
+        }
+        function fnsqrt(){
+            myform.display.value=Math.sqrt(myform.display.value);
+        }
+    </script>
+    <style>
+        body{
+            background-image: url("mathf.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        input{
+            height:30px;
+            width:75px;
+            color:#C71585;
+            font-family: Arial, Helvetica, sans-serif;
+            border:1px solid #C71585;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        .create{
+            margin-left:580px;
+            margin-top:300px;
+        }
+        #textarea{
+            width:392px;
+        }
+        .head{
+            width:300px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color:#C71585;
+            margin-left:620px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-decoration: underline;
+
+        }
+        .para{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color:#C71585;
+            margin-left:50px;
+            font-weight: bold;
+
+        }
+    </style>
+    <body>
+        <h1 class="head">Calculator</h1>
+        <p class="para">
+            "Calculators are simply a tool students use to help solve problems.<br> Since they eliminate tedious computations and algebraic manipulations that discourage many students,<br> calculators allow more students to solve problems and appreciate<br> the power and value of mathematics in the world today."
+        </p>
+        <form name="myform" class="create">
+            <input type="text"name="display"id="textarea" ><br>
+            <input type="button"name="btnsin" value="sin"onclick="fnsin()">
+            <input type="button"name="btncos" value="cos"  onclick="fncos()">
+            <input type="button"name="btntan" value="tan"  onclick="fntan()">
+            <input type="button"name="btnsqr" value="^2" onclick="fnsquare()">
+            <input type="button"name="btnsqrt" value="Rt"onclick="fnsqrt()"><br>
+            
+            <input type="button" name="btn7" value="7" onclick="myclick('7')">
+            <input type="button" name="btn8" value="8"onclick="myclick('8')">
+            <input type="button" name="btn9" value="9" onclick="myclick('9')">
+            <input type="button" name="btndel" value="DEL"onclick="backspace()">
+            <input type="button" name="btnac" value="AC"onclick="ac()"><br>
+            <input type="button" name="btn4" value="4" onclick="myclick('4')">
+            <input type="button" name="btn5" value="5" onclick="myclick('5')">
+            <input type="button" name="btn6" value="6" onclick="myclick('6')">
+            <input type="button" name="btnsub" value="-" onclick="myclick('-')">
+            <input type="button" name="btnadd" value="+" onclick="myclick('+')"><br>
+            <input type="button" name="btn1" value="1" onclick="myclick('1')">
+            <input type="button" name="btn2" value="2" onclick="myclick('2')">
+            <input type="button" name="btn3" value="3"onclick="myclick('3')">
+            <input type="button" name="btnmul" value="*"onclick="myclick('*')">
+            <input type="button" name="btndiv" value="/" onclick="myclick('/')"><br>
+            <input type="button" name="btnzero" value="0" onclick="myclick('0')">
+            <input type="button" name="btntwozero" value="00" onclick="myclick('00')">
+            <input type="button" name="btnpoint" value="."onclick="myclick('.')">
+            <input type="button" name="btnmod" value="%" onclick="myclick('%')">
+            <input type="button" name="btnequal" value="=" onclick="equalto()"><br>
+            
+        </form>
+    </body>
+</html>
